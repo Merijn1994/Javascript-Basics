@@ -1,0 +1,56 @@
+.home-background {
+  background-color: darkgray;
+  margin: 0 auto;
+}
+
+.colour-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  width: 300px;
+  padding-left: 0px;
+  font-size: 30px;
+  row-gap: 2px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.colour-list__home {
+  background-color: darkgray;
+  padding: 20px;
+}
+
+.colour-list__red {
+  background-color: red;
+  padding: 20px;
+}
+
+.colour-list__orange {
+  background-color: orange;
+  padding: 20px;
+}
+
+.colour-list__purple {
+  background-color: purple;
+  padding: 20px;
+}
+
+.colour-list__green {
+  background-color: green;
+  padding: 20px;
+}
+
+#bars:hover + .colour-list {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,42 @@
+@import "./mixins";
+
+.home-background {
+    background-color: darkgray;
+    margin: 0 auto;
+}
+
+.colour-list {
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 300px;
+    padding-left: 0px;
+    font-size: 30px;
+    row-gap: 2px;
+    transform: translateX(-300px);
+    transition: transform 1s;
+    &__home {
+        background-color: darkgray;
+        @include background-list-styling();
+    }
+    &__red {
+        background-color: red;
+        @include background-list-styling();
+    }
+    &__orange {
+        background-color: orange;
+        @include background-list-styling();
+    }
+    &__purple {
+        background-color: purple;
+        @include background-list-styling();
+    }
+    &__green {
+        background-color: green;
+        @include background-list-styling();
+    }
+}
+
+#bars:hover + .colour-list {
+    transform: translateX(0px);
+}

@@ -47,7 +47,8 @@ numberToGuess = Math.floor(Math.random() * maxNum) + minNum;
 while (currentGuess !== numberToGuess) {
     if (numberOfGuesses < 1) {
         alert(
-            "Unfortunately, you have no guesses left. You can start again with a new number!"
+            "Unfortunately, you have no guesses left. You can start again with a new number! The correct number was " + 
+            numberToGuess + "!"
         );
     numberOfGuesses = 5;
     numberToGuess = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
@@ -77,7 +78,7 @@ if (currentGuess > numberToGuess) {
 } else if (currentGuess < numberToGuess) {
     numberOfGuesses--;
     if (numberOfGuesses < 1) {
-        alert("This was your last guess")
+        alert("This was your last guess.")
     } else {
         alert("Your guess was too low. You still have " + 
         numberOfGuesses + 
@@ -85,7 +86,7 @@ if (currentGuess > numberToGuess) {
         );
     }
 } else {
-    alert("Congratulations!! You guessed the right number!");
+    alert("Congratulations!! You guessed the right number! The correct number was " + numberToGuess + "!");
     alert("The game will now be closed. Thank you for playing " + 
     person + 
     "! See you next time!!"
