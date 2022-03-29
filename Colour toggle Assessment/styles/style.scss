@@ -1,11 +1,19 @@
+// imports
+
 @import "./mixins";
 
-.home-background {
-    background-color: darkgray;
+// Algemene CSS
+
+body {
     margin: 0 auto;
 }
 
-.colour-list {
+h1 {
+    position: absolute;
+    left: 50%;
+}
+
+.colour-menu {
     display:flex;
     flex-direction: column;
     list-style-type: none;
@@ -14,29 +22,47 @@
     font-size: 30px;
     row-gap: 2px;
     transform: translateX(-300px);
-    transition: transform 1s;
+    transition: transform 0.5s;
     &__home {
-        background-color: darkgray;
+        background-color: $colour-home;
         @include background-list-styling();
     }
     &__red {
-        background-color: red;
+        background-color: $colour-red;
         @include background-list-styling();
     }
     &__orange {
-        background-color: orange;
+        background-color: $colour-orange;
         @include background-list-styling();
     }
     &__purple {
-        background-color: purple;
+        background-color: $colour-purple;
         @include background-list-styling();
     }
     &__green {
-        background-color: green;
+        background-color: $colour-green;
         @include background-list-styling();
     }
 }
 
-#bars:hover + .colour-list {
+// Toe te voegen CSS met JS
+
+.menu-hover-animation{
     transform: translateX(0px);
+}
+
+.home-background {
+    background-color: $colour-home;
+}
+.red-background {
+    background-color: $colour-red;
+}
+.orange-background {
+    background-color: $colour-orange;
+}
+.purple-background {
+    background-color: $colour-purple;
+}
+.green-background {
+    background-color: $colour-green;
 }
