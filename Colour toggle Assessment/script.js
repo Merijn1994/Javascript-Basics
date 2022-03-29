@@ -19,6 +19,16 @@ const addHoverEventBarsElement = function() {
     });
 }
 
+const addHoverEventMenuElement = function() {
+    const colourList = document.getElementById('colour-menu');
+    colourList.addEventListener("mouseover", function() {
+        addAnimationClassColourList();
+    });
+    colourList.addEventListener("mouseout", function() {
+        removeAnimationClassColourList();
+    });
+}
+
 addHoverEventBarsElement();
 
 // changing the classes to different backgrounds and removing them
