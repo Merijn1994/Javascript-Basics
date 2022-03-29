@@ -14,6 +14,9 @@ const addHoverEventBarsElement = function() {
     burgerBars.addEventListener("mouseover", function() {
         addAnimationClassColourList();
     });
+    burgerBars.addEventListener("mouseout", function() {
+        removeAnimationClassColourList();
+    });
 }
 
 addHoverEventBarsElement();
